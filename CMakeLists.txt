@@ -6,11 +6,13 @@ set(SOURCES
 	Src/main.cpp
 	Src/user.cpp
 	Src/server.cpp
+	Src/room.cpp
 	)
 	
 set(HEADERS
 	Headers/user.h
 	Headers/server.h
+	Headers/room.h
 	)
 
 
@@ -34,3 +36,5 @@ target_link_libraries(${PROJECT_NAME} C:/Users/Michael/Documents/boost_1_67_0/bo
 
 				   
 set_target_properties(${PROJECT_NAME} PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY "${PROJECT_BINARY_DIR}/Debug")
+
+   add_compile_definitions(_WIN32_WINNT=0x0501)

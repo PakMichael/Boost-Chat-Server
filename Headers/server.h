@@ -12,6 +12,7 @@ using boost::asio::ip::tcp;
 
 class Server {
 	tcp::acceptor accept;
+	Room* room;
 
 public:
 

@@ -23,6 +23,7 @@ void User::handle_read(const boost::system::error_code& /*error*/,
 	std::string line;
 	std::getline(is, line);
 	std::cout << line << std::endl;
+	chatRoom->deliverMessage(line, this);
 
 	readMsg();
 }
