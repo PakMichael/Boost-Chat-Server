@@ -12,7 +12,6 @@ public:
 	void deliverMessage(std::string msg, User* sender);
 
 
-
 }; 
 
 

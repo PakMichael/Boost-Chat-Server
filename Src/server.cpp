@@ -14,7 +14,7 @@ void Server::waitForConnection() {
 }
 
 void Server::acceptHandler(const boost::system::error_code& ec, User* ptr) {
-	ptr->writeMsg("hello");
+	ptr->queueMsg("To enter the chat please insert your nickname: ");
 	ptr->readMsg();
 
 

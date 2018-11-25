@@ -15,8 +15,10 @@ void Room::removeUser(User* user) {
 
 void Room::deliverMessage(std::string msg, User* sender) {
 	for (User* recipient : usersInRoom) {
-		if (recipient != sender) {
-			recipient->writeMsg(msg);
+		if (recipient != sender && recipient->nameSet) {
+			recipient->queueMsg(sender->name+": "+msg);
 		}
 	}
 }
+
+ 
